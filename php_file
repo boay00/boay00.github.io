@@ -1,0 +1,17 @@
+<?php
+// Retrieve form data
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+
+// Perform necessary actions to send the message, such as sending an email or storing it in a database
+
+// Example: Sending an email using the mail() function
+$to = "bedeyoung19@gmail.com";
+$subject = "Message from $name from your website";
+$body = "Name: $name\nEmail: $email\nMessage: $message";
+$headers = "From: $email";
+
+// Send the email
+mail($to, $subject, $body, $headers);
+
